@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
   
   :focus {
     outline: 0;
-    box-shadow: 0 0 0 2px ${(prosp) => prosp.theme['green-500']};
+    background-color: ${(prosp) => prosp.theme['gray-700']};
   }
 
   body {
