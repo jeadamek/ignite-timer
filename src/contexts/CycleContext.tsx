@@ -9,6 +9,7 @@ import { Cycle, cyclesReducer } from '../reducers/cycles/reducer'
 import {
   addNewCycleAction,
   interruptCurrentCycleAction,
+  markCurrentCycleAsFinishedAction,
 } from '../reducers/cycles/actions'
 import { differenceInSeconds } from 'date-fns'
 interface CreateCycleData {
@@ -69,7 +70,7 @@ export function CyclesContextProvider({ children }: CycleContexProviderProps) {
   }
 
   function markCurrentCycleAsFinished() {
-    dispatch(markCurrentCycleAsFinished())
+    dispatch(markCurrentCycleAsFinishedAction())
   }
 
   function createNewCycle(data: CreateCycleData) {
